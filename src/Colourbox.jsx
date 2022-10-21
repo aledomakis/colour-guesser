@@ -1,7 +1,14 @@
 import "./index.css";
 
-const Colourbox = () => {
-  return <div className="colorbox"></div>;
+const Colourbox = ({ color }) => {
+  return (
+    <div
+      className="colorbox"
+      style={{
+        backgroundColor: `rgb(${color.red},${color.green},${color.blue})`,
+      }}
+    ></div>
+  );
 };
 
 export default Colourbox;
