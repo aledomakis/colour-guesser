@@ -3,6 +3,7 @@ import Colourbox from "./Colourbox";
 function App() {
   return (
     <div className="container">
+      <h1>GUESS THE COLOR</h1>
       <Colourbox />
       <div className="name-input">
         <input type="text" placeholder="Vorname" />
