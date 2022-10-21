@@ -1,9 +1,8 @@
 const useColorGenerator = () => {
-  const r = Math.floor(Math.random() * 255);
-  const g = Math.floor(Math.random() * 255);
-  const b = Math.floor(Math.random() * 255);
-  const generatedColor = { r, g, b };
-  return { r, g, b };
+  const red = Math.floor(Math.random() * 255);
+  const green = Math.floor(Math.random() * 255);
+  const blue = Math.floor(Math.random() * 255);
+  return { red, green, blue };
 };
 
 export default useColorGenerator;
