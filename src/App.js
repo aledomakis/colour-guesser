@@ -1,6 +1,5 @@
-import Colourbox from "./Colourbox";
 import Inputs from "./Inputs";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import useColorGenerator from "./useColorGenerator";
 import { renderIntoDocument } from "react-dom/test-utils";
 
@@ -11,16 +10,32 @@ function App() {
     blue: 255,
   });
   const generatedColor = useColorGenerator();
-  const handleGenerate = () => {
+
+  //generate initial Color when Page is called
+  useEffect(() => {
     setTrueColor(generatedColor);
-    console.log(trueColor);
+  }, []);
+
+  //generate Color every time the user submits a color
+  const generateNewColor = () => {
+    setTrueColor(generatedColor);
   };
   return (
     <div className="container">
-      <h1>GUESS THE COLOR</h1>
-      <Colourbox color={trueColor} />
-      <Inputs />
-      <button onClick={handleGenerate}>Create color</button>
+      <h1
+        style={{
+          color: `rgb(${trueColor.red},${trueColor.green},${trueColor.blue})`,
+        }}
+      >
+        GUESS THE COLOR
+      </h1>
+      <div
+        className="colorbox"
+        style={{
+          backgroundColor: `rgb(${trueColor.red},${trueColor.green},${trueColor.blue})`,
+        }}
+      ></div>
+      <Inputs handleSubmit={generateNewColor} />
     </div>
   );
 }

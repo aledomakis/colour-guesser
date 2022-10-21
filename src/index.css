@@ -17,10 +17,11 @@ h1 {
   font-size: 28px;
   font-weight: 400;
   text-align: center;
-  margin: 10px 0;
+  margin: 10px 0 0;
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="submit"] {
   font-family: Roboto;
   text-align: center;
   border: 1px;
@@ -33,8 +34,13 @@ input[type="text"] {
   outline: none;
 }
 
-input[type="text"]:hover {
+input[type="text"]:hover,
+input[type="submit"]:hover {
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+input[type="submit"] {
+  background-color: green;
 }
 
 .container {
@@ -52,12 +58,16 @@ input[type="text"]:hover {
 }
 
 .colorbox {
-  background-color: rgba(0, 255, 255, 0.322);
   border-radius: 10px;
   width: inherit;
   max-width: inherit;
   height: 200px;
   margin: 10px 0;
+}
+
+.input-form {
+  width: inherit;
+  max-width: inherit;
 }
 
 .name-input {
