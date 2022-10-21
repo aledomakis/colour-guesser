@@ -1,6 +1,6 @@
 const Inputs = () => {
   return (
-    <div className="inputs">
+    <>
       <div className="name-input">
         <input type="text" placeholder="Vorname" />
         <input type="text" placeholder="Nachname" />
@@ -29,7 +29,7 @@ const Inputs = () => {
           <input type="range" />
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
